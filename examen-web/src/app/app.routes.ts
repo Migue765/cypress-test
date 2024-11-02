@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { CafeComponent } from './cafes/cafe/cafe.component';
+import { CafeComponent } from './cafes/cafe.component';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 

@@ -1,21 +1,22 @@
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
-import { CafeComponent } from './cafe/cafe.component';
-
-
+import { HttpClient } from '@angular/common/http';
+import { CafeComponent } from './cafe.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    CafeComponent,
-    HttpClientModule
-  ],
   declarations: [
     CafeComponent
   ],
+  imports: [
+    CommonModule,
+    CafeComponent,
+    HttpClient,
+    BrowserModule
+  ],
   exports: [
     CafeComponent
-  ],
+  ]
+
 })
 export class CafesModule { }
