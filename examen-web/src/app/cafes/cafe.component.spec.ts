@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { CafeComponent } from './cafe.component';
 import { CafeService } from './cafe.service';
 import { of } from 'rxjs';
@@ -12,8 +11,7 @@ describe('CafeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [],
-      imports: [CafeComponent, HttpClientTestingModule],
+      imports: [HttpClientTestingModule],
       providers: [CafeService]
     })
       .compileComponents();
