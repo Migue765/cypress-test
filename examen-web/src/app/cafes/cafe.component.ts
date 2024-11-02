@@ -14,13 +14,20 @@ import { CommonModule } from '@angular/common';
 })
 export class CafeComponent implements OnInit {
   public cafes: Cafe[] = [];
+  public totalCafeOrigen: number = 0;
+  public totalCafeBlend: number = 0;
 
   constructor(private cafeService: CafeService) { }
 
   ngOnInit(): void {
     this.cafeService.getCafes().subscribe((data: Cafe[]) => {
       this.cafes = data;
-      console.log(this.cafes);
+      this.calculateTotals();
     });
+  }
+
+  calculateTotals(): void {
+    this.totalCafeOrigen = this.cafes.filter(cafe => cafe.tipo === 'Café de Origen').length;
+    this.totalCafeBlend = this.cafes.filter(cafe => cafe.tipo === 'Blend').length;
   }
 }
