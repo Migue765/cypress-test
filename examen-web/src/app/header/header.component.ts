@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-
+  public title = "El aroma mágico"
 }
